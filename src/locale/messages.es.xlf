@@ -858,7 +858,7 @@
       </trans-unit>
       <trans-unit id="3e2dd0a7d4671710d334e57e5d490d0b7e2b8227" datatype="html">
         <source>Assign Student</source>
-        <target>Asignar Estudiante</target>
+        <target>Asignar Estudiantes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/admin/course-home/course-home.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -902,7 +902,7 @@
       </trans-unit>
       <trans-unit id="019051980fbe7387b89d77a0bbaa042e215b94ea" datatype="html">
         <source>Assign Student to</source>
-        <target>Asignar Estudiante al curso</target>
+        <target>Asignar Estudiantes al curso</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/admin/course-home/course-home.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -2010,7 +2010,7 @@
       </trans-unit>
       <trans-unit id="a6c8f3e6b834554fbb0bd68fb406d98e44f4e3df" datatype="html">
         <source>Enter the duration</source>
-        <target>Ingresa la duración del Anuncio</target>
+        <target>Ingrese la duración del Anuncio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/common/calendar-view/calendar-view.component.ts</context>
           <context context-type="linenumber">120</context>

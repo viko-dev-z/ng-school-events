@@ -47,6 +47,12 @@ export class CourseHomeComponent implements OnInit {
       .addStudentToCourse(studentCourse)
       .subscribe(updatedCourse => {
         this.loadStudents();
+        const evtIndex = this.availableStudents.findIndex(
+          obj => obj.id === student.id.toString()
+        );
+        if (evtIndex !== -1) {
+          this.availableStudents.splice(evtIndex, 1);
+        }
       });
   }
 
@@ -60,6 +66,9 @@ export class CourseHomeComponent implements OnInit {
             students.forEach(student => {
               if (!this.assignedStudents.some(s => s.studentId == student.id)) {
                 this.availableStudents.push(student);
+                if ( !this.isUnique(this.availableStudents)) {
+                  this.availableStudents.splice(this.availableStudents.length - 1, 1);
+                }
               }
               this.availableStudents.sort((n1, n2) =>
                 n1.firstName.localeCompare(n2.firstName)
@@ -105,6 +114,18 @@ export class CourseHomeComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  isUnique(arr: any): boolean {
+    let tmpArr = [];
+    for ( let obj in arr ) {
+      if ( tmpArr.indexOf(arr[obj].id) < 0){
+        tmpArr.push(arr[obj].id);
+      } else {
+        return false; // Duplicate value for property1 found
+      }
+    }
+    return true; // No duplicate values found for property1
   }
 
 }

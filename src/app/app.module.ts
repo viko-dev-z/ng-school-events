@@ -262,13 +262,13 @@ const appRoutes: Routes = [
       {
         path: ":courseId",
         component: CourseYearComponent,
-        data: { breadcrumb: "Detalles" }
+        data: { breadcrumb: "Gestiones Asociadas" }
         // canActivate: [AuthGuard, AdminGuard]
       },
       {
         path: "rel/:courseYearId",
         component: CourseHomeComponent,
-        data: { breadcrumb: "Detalle de Gestión" }
+        data: { breadcrumb: "Gestiones Asociadas  /  Estudiantes" }
         // canActivate: [AuthGuard, AdminGuard]
       }
     ]
@@ -333,13 +333,13 @@ const appRoutes: Routes = [
       {
         path: ":courseId",
         component: TeacherCourseHomeComponent,
-        data: { breadcrumb: "Detalles" }
+        data: { breadcrumb: "Estudiantes Asociados" }
         // canActivate: [AuthGuard, TeacherGuard]
       },
       {
         path: ":courseId/teacher-student-home/:studentId",
         component: TeacherStudentHomeComponent,
-        data: { breadcrumb: "Detalles de Estudiante" }
+        data: { breadcrumb: "Estudiantes Asociados / Detalles de Estudiante" }
         // canActivate: [AuthGuard, TeacherGuard]
       }
     ]
@@ -369,7 +369,7 @@ const appRoutes: Routes = [
       {
         path: ":courseId",
         component: QuestionHomeComponent,
-        data: { breadcrumb: "Lista" }
+        data: { breadcrumb: "Conversaciones por Curso / Lista de Temas" }
         // canActivate: [AuthGuard, TeacherGuard]
       }
     ]
@@ -417,7 +417,7 @@ const appRoutes: Routes = [
       {
         path: ":id",
         component: QuestionHomeComponent,
-        data: { breadcrumb: "Lista" }
+        data: { breadcrumb: "Conversaciones por Estudiante / Lista de Temas" }
         // canActivate: [AuthGuard, ParentGuard]
       }
     ]
